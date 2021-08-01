@@ -25,7 +25,7 @@ class Homepage extends ConsumerWidget {
           children: [
             //HEADERS AND USER PROFILE
             FutureBuilder(
-                future: getUserProfiles(
+                future: getUserProfiles(context,
                     FirebaseAuth.instance.currentUser.phoneNumber),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
